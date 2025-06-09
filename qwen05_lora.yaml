@@ -1,0 +1,26 @@
+name: qwen05_lora
+channels:
+  - nvidia          # 提供 pytorch-cuda 元包
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.2.1
+  - torchvision=0.17.1
+  - torchaudio=2.2.1
+  - pytorch-cuda=11.8      # 统一把 CUDA 运行时带进来（cu118）
+  - numpy=1.26.4
+  - scipy=1.12.0
+  - scikit-learn=1.4.2
+  - sentencepiece=0.2.0
+  - tqdm=4.66.4
+  - pip
+  - pip:
+      - transformers==4.40.2
+      - datasets==2.18.0
+      - peft==0.8.2
+      - accelerate==0.29.2
+      - rouge_chinese==1.0.3
+      - evaluate==0.4.2
+      - jieba==0.42.1
